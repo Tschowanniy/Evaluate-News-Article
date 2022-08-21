@@ -31,7 +31,7 @@ The page:
 ![alt text for screen readers](./assets/Page.png "the final not so goodlooking result")
 
 The alert:
-![alt text for screen readers](./assets/alert.png "when you enter a not valid URL")
+![alt text for screen readers](./assets/Alert.png "when you enter a not valid URL")
 
 The result:
 ![alt text for screen readers](./assets/result.png "the final not so goodlooking result")
