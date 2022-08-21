@@ -48,12 +48,18 @@ app.post('/api', async (req, res) => {
     const apiURL = `${baseURL}key=${apiKey}&url=${userInput}&lang=en`
     
     // throw a fetch onto the API
-    const fetchedFromAPI = await fetch(apiURL)
+    const fetchedFromAPI = await fetch(apiURL )
     // extract the data in json format
-    const apiData = await fetchedFromAPI.json()
-    // response from the post function will be the json-formatted data from the API call
-    res.send(apiData)
-})
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data),
+        res.send(data)
+    })
+    }
+    //const apiData = await fetchedFromAPI.json()
+        // response from the post function will be the json-formatted data from the API call
+        
+)
 
 // as done by following the script, we are an port 8081 now, nevertheless we could switch to whatever we want to
 app.listen(8081, function () {
