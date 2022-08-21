@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evalute News Article</title>
+
+</head>
+
+<body>
+
+    <main>
+        <h1>
+            <center>Evaluation of the text of an URL that you specify</center>
+        </h1>
+        <p>
+            <center>
+                Paste a URL that links an article or a blogpost that you want to have analyzed by positivity and
+                sentiment.
+            </center>
+        </p>
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" type="text" name="input" value="" placeholder="Enter URL here">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return handleSubmit(event)">
+            </form>
+        </section>
+
+        <section>
+            <strong>Form Results:</strong>
+            <div id="polarity"></div>
+            <div id="subjectivity"></div>
+            <div id="textsnippet"></div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+                console.log('Service Worker on duty!')
+            });
+        }
+    </script>
+</body>
+
+</html>
