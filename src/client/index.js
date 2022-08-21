@@ -1,4 +1,3 @@
-// js files
 import { isUrlValid } from './js/isUrlValid'
 import { handleSubmit } from './js/formHandler'
 //import { nameChecker } from './js/nameChecker'

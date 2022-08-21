@@ -6,7 +6,7 @@ function handleSubmit(event) {
 
     if (Client.isUrlValid(formText)) {
 
-        // posting data to the location /api, this is where the spicy part of server/index.js looks into
+        // posting data to the location /api, this is where the spicy part of server/index.js connects
         postData('/api', { url: formText })
 
             .then((res) => {
